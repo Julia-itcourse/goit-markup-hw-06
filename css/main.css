@@ -1026,17 +1026,16 @@ textarea {
   height: 12px;
 }
 
-.form-field {
+.label {
   position: relative;
+  width: 100%;
 }
 .input-text {
   position: absolute;
-  top: 12px;
-  left: 42px;
-  /* transform: translateY(); */
+  top: 50%;
+  left: ;
+  transform: translateY(-50%);
 }
 .form-icon {
   position: absolute;
-  top: 50%;
-  transform: translate;
 }
