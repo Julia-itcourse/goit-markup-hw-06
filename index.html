@@ -534,33 +534,54 @@
       <div class="modal">
         <button class="close-button"></button>
         <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
-        <form id="form" action="#">
-          <label
-            ><span>Имя</span>
-            <input class="input-field" type="email" name="e-mail" id="e-mail" />
-          </label>
-          <label
-            ><span>Телефон</span>
-            <input class="input-field" type="email" name="e-mail" id="e-mail" />
-          </label>
-          <label
-            ><span>Почта</span>
-            <input class="input-field" type="email" name="e-mail" id="e-mail" />
-          </label>
-          <label
-            ><span>Комментарий</span>
-            <input class="input-field" type="email" name="e-mail" id="e-mail" />
-          </label>
-          <label
-            ><span
-              >Соглашаюсь с рассылкой и принимаю
-              <a href="" class="form-link link">Условия договора</a></span
-            >
-            <input class="input-field" type="email" name="e-mail" id="e-mail" />
-          </label>
-          <!-- button -->
-          <button type="submit">Отправить</button>
+        <form id="form" action="#" class="form">
+          <div class="form-field">
+            <label
+              ><span>Имя</span>
+              <input class="input-field" type="text" name="name" id="name" />
+            </label>
+          </div>
+
+          <div class="form-field">
+            <label
+              ><span>Телефон</span>
+              <input class="input-field" type="tel" name="tel" id="tel" />
+            </label>
+          </div>
+          <div class="form-field">
+            <label
+              ><span>Почта</span>
+              <input
+                class="input-field"
+                type="email"
+                name="e-mail"
+                id="e-mail"
+              />
+            </label>
+          </div>
+          <div class="form-field">
+            <label
+              ><span>Комментарий</span>
+              <textarea class="input-field" name="comment" id="comment">
+              </textarea>
+            </label>
+          </div>
+          <div class="form-field">
+            <label
+              ><span
+                >Соглашаюсь с рассылкой и принимаю
+                <a href="" class="form-link link">Условия договора</a></span
+              >
+              <input
+                class="input-field"
+                type="checkbox"
+                name="policy"
+                id="policy"
+              />
+            </label>
+          </div>
         </form>
+        <button type="submit" class="primary-button">Отправить</button>
       </div>
     </div>
   </body>
