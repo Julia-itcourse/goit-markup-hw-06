@@ -986,6 +986,7 @@ textarea {
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+  width: 100%;
 }
 
 .close-button {
@@ -1005,4 +1006,17 @@ textarea {
   width: 11px;
   height: 11px;
   fill: var(--title-text-color);
+}
+
+#name-form-icon {
+  width: 12px;
+  height: 12px;
+}
+#tel-form-icon {
+  width: 13px;
+  height: 13px;
+}
+#mail-form-icon {
+  width: 15px;
+  height: 12px;
 }
