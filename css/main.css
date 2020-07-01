@@ -993,6 +993,11 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  position: absolute;
+  right: 8px;
+  top: 8px;
+
   width: 30px;
   height: 30px;
   border-radius: 50%;
