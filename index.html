@@ -507,12 +507,21 @@
           </div>
           <div class="footer-element">
             <p class="join-us">подпишитесь на рассылку</p>
-            <button type="button" class="primary-button button--with-icon">
-              Подписаться
-              <svg class="button-icon">
-                <use xlink:href="./images/sprite.svg#send"></use>
-              </svg>
-            </button>
+            <form>
+              <input
+                class="input-field"
+                type="text"
+                name="e-mail"
+                id="e-mail"
+                placeholder="E-mail"
+              />
+              <button type="submit" class="primary-button button--with-icon">
+                Подписаться
+                <svg class="button-icon">
+                  <use xlink:href="./images/sprite.svg#send"></use>
+                </svg>
+              </button>
+            </form>
           </div>
         </div>
         <!-- <div class="container copyright">
@@ -520,5 +529,39 @@
         </div> -->
       </div>
     </footer>
+
+    <div class="backdrop">
+      <div class="modal">
+        <button class="close-button"></button>
+        <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+        <form id="form" action="#">
+          <label
+            ><span>Имя</span>
+            <input class="input-field" type="email" name="e-mail" id="e-mail" />
+          </label>
+          <label
+            ><span>Телефон</span>
+            <input class="input-field" type="email" name="e-mail" id="e-mail" />
+          </label>
+          <label
+            ><span>Почта</span>
+            <input class="input-field" type="email" name="e-mail" id="e-mail" />
+          </label>
+          <label
+            ><span>Комментарий</span>
+            <input class="input-field" type="email" name="e-mail" id="e-mail" />
+          </label>
+          <label
+            ><span
+              >Соглашаюсь с рассылкой и принимаю
+              <a href="" class="form-link link">Условия договора</a></span
+            >
+            <input class="input-field" type="email" name="e-mail" id="e-mail" />
+          </label>
+          <!-- button -->
+          <button type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
