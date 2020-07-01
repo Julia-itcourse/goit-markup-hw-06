@@ -1025,3 +1025,18 @@ textarea {
   width: 15px;
   height: 12px;
 }
+
+.form-field {
+  position: relative;
+}
+.input-text {
+  position: absolute;
+  top: 12px;
+  left: 42px;
+  /* transform: translateY(); */
+}
+.form-icon {
+  position: absolute;
+  top: 50%;
+  transform: translate;
+}
