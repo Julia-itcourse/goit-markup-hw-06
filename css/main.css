@@ -924,7 +924,7 @@ address .physical-address {
 
 .input-field {
   width: 358px;
-  margin-bottom: 28px;
+
   padding: 12px;
   border: 1px solid rgba(255, 255, 255, 0.3);
 
@@ -969,10 +969,7 @@ address .physical-address {
 
   color: var(--title-text-color);
 }
-.form {
-  display: flex;
-  flex-direction: column;
-}
+
 .form-link {
   color: var(--accent-color);
   text-decoration: underline;
@@ -981,7 +978,9 @@ address .physical-address {
 textarea {
   resize: none;
 }
-
+.lable {
+  display: block;
+}
 .input-field {
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
@@ -1033,9 +1032,24 @@ textarea {
 .input-text {
   position: absolute;
   top: 50%;
-  left: ;
+  left: 42px;
   transform: translateY(-50%);
 }
 .form-icon {
   position: absolute;
+  top: 50%;
+  left: 19px;
+  transform: translateY(-50%);
+}
+
+.form {
+  text-align: center;
+}
+
+.form-field {
+  margin-bottom: 28px;
+}
+
+.form-button {
+  width: 200px;
 }
