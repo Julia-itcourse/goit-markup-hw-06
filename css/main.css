@@ -1053,3 +1053,7 @@ textarea {
 .form-button {
   width: 200px;
 }
+
+.conditions {
+  display: block;
+}
