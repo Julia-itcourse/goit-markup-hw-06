@@ -987,6 +987,7 @@ textarea {
   border-radius: 4px;
   width: 100%;
   padding: 12px 42px;
+  color: var(--title-text-color);
 }
 .input-field--no-icon {
   padding: 12px;
