@@ -990,6 +990,7 @@ textarea {
 }
 .input-field--no-icon {
   padding: 12px;
+  color: var(--title-text-color);
 }
 
 .close-button {
@@ -1063,12 +1064,18 @@ textarea {
 
   translate: (-28px, calc(-100%-4px));
 }
-
+.checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
 .checkbox-icon {
   display: inline-block;
   width: 16px;
   height: 15px;
   background-image: url(../images/checkbox-icon-empty.svg);
+  margin-right: 10px;
 }
 .checkbox:checked + .checkbox-icon {
   width: 16px;
@@ -1099,5 +1106,6 @@ textarea {
 }
 
 .conditions {
-  display: block;
+  /* display: block; */
+  display: flex;
 }
