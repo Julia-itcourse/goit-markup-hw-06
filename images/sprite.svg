@@ -88,6 +88,10 @@
     <path d="M6 6a3 3 0 1 0 0-6 3 3 0 1 0 0 6zm0 1.5c-2.002 0-6 1.005-6 3v.75c0 .412.338.75.75.75h10.5c.412 0 .75-.338.75-.75v-.75c0-1.995-3.998-3-6-3z"></path>
   </symbol>
 
+<symbol viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" id="full-check">
+    <path d="M2.957 7.752l-.069-.066-.069.065-.888.842-.076.072.076.073 3.496 3.334.069.066.069-.066 7.504-7.158.076-.073-.076-.072-.882-.841-.069-.066-.069.066-6.553 6.246-2.539-2.422z" fill="#fff" stroke="#fff" stroke-width=".2"></path>
+  </symbol>
+
 </svg>
 
 <svg class="icon">
@@ -143,4 +147,8 @@
 </svg>
 <svg class="icon">
   <use xlink:href="#name-form-icon"></use>
+</svg>
+
+<svg class="icon">
+  <use xlink:href="#full-check"></use>
 </svg>

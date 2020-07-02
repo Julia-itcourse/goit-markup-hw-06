@@ -1047,19 +1047,38 @@ textarea {
   transform: translateY(-50%);
 }
 
-.label:focus-within .form-icon {
+.label:focus-within .form-icon,
+.input-field:not(:placeholder-shown) + .form-icon {
   fill: var(--accent-color);
 }
 .input-field:focus {
   outline: 1px solid var(--accent-color);
   border-radius: 4px;
 }
-.input-field:focus + .input-text {
+.input-field:focus + .input-text,
+.input-field:not(:placeholder-shown) + .input-text {
   font-size: 12px;
   color: var(--accent-color);
   top: 0;
 
   translate: (-28px, calc(-100%-4px));
+}
+
+.checkbox-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  background-image: url(../images/checkbox-icon-empty.svg);
+}
+.checkbox:checked + .checkbox-icon {
+  width: 16px;
+  height: 15px;
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
+  background-image: url(../images/full-check.svg);
+  background-size: contain;
+  background-origin: border-box;
+  border-radius: 2px;
 }
 
 .form {
