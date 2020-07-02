@@ -1030,6 +1030,11 @@ textarea {
 }
 
 .label {
+  /* position: relative; */
+  width: 100%;
+}
+
+.form-field {
   position: relative;
   width: 100%;
 }
@@ -1057,7 +1062,7 @@ textarea {
 .input-field:focus + .input-text {
   font-size: 12px;
   color: var(--accent-color);
-  top: 0;
+  top: 0px;
   translate: (-28px, calc(-100%-4px));
 }
 
