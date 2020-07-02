@@ -802,10 +802,16 @@ button:focus {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-.footer-element {
+.footer-form{
   display: flex;
-  flex-direction: column;
-  width: calc((100% - 69 * 2) / 3);
+}
+.footer-element.item:not(:last-child) {
+
+  width: calc((50% - 45px) / 2);
+}
+.footer-element:last-child{
+  width: calc(50% - 15px);
+
 }
 .footer-content .logo {
   margin-bottom: 20px;
@@ -923,17 +929,22 @@ address .physical-address {
 }
 
 .input-field {
+  margin-right: 12px;
   width: 100%;
 
   padding: 12px;
   border: 1px solid rgba(255, 255, 255, 0.3);
 
   border-radius: 4px;
-  background-color: var(--footer-secondary-bakground-color);
-  color: rgba(255, 255, 255, 0.6);
+  background-color: inherit;
+  color: var(--secondary-text-color);
 }
 
-.backdrop {
+/* /* /* .backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+} */
+/* .backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -941,8 +952,8 @@ address .physical-address {
   height: 100%;
   background-color: var(--backdrop-color);
   z-index: 999;
-}
-
+} */
+/* 
 .modal {
   max-width: 528px;
   border-radius: 4px;
@@ -1104,9 +1115,10 @@ textarea {
 .form-button:hover {
   background-color: #188ce8;
   color: var(--primary-background-color);
-}
+} */
+
 
 .conditions {
   /* display: block; */
   display: flex;
-}
+} */

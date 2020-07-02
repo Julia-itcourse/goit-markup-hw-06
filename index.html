@@ -68,7 +68,9 @@
       <section class="hero">
         <div class="hero-text">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button type="button" class="primary-button">Заказать услугу</button>
+          <button type="button" class="primary-button" data-modal-open>
+            Заказать услугу
+          </button>
         </div>
       </section>
       <!-- Our Advantages -->
@@ -435,11 +437,16 @@
         <div class="footer-content">
           <address class="footer-element adress">
             <a href="./index.html" class="logo"><span>Web</span> Studio</a>
-            <span class="physical-address">
+            <!-- <span class="physical-address">
               г. Киев, пр-т Леси Украинки, 26
-            </span>
+            </span> -->
 
             <ul class="list">
+              <li class="footer__contact-item">
+                <span class="physical-address">
+                  г. Киев, пр-т Леси Украинки, 26</span
+                >
+              </li>
               <li class="footer__contact-item">
                 <a
                   href="mailto:info@devstudio.com"
@@ -507,7 +514,7 @@
           </div>
           <div class="footer-element">
             <p class="join-us">подпишитесь на рассылку</p>
-            <form>
+            <form class="footer-form">
               <input
                 class="input-field"
                 type="text"
@@ -530,9 +537,9 @@
       </div>
     </footer>
 
-    <div class="backdrop">
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="close-button">
+        <button class="close-button" data-modal-close>
           <svg class="form-close-icon" id="close-icon">
             <use xlink:href="./images/sprite.svg#close-icon"></use>
           </svg>
@@ -617,5 +624,22 @@
         </form>
       </div>
     </div>
+
+    <!-- <div data-modal class="backdrop is hidden">
+<div class="modal">
+<button data-modal-close class="close-button">
+  <svg class="form-close-icon" id="close-icon">
+            <use xlink:href="./images/sprite.svg#close-icon"></use>
+          </svg>
+</button>
+
+</div>
+
+</div>
+
+
+    <script src="./js/modal.js"></script>
+  </body>
+</html> -->
   </body>
 </html>

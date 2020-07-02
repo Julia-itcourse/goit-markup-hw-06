@@ -13,314 +13,242 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css"
       rel="stylesheet"
     />
+    <body>
+<div data-modal class="backdrop is-hidden">
+ <div class="modal-div">
+ <button data-modal-close class="close-window">
+ <svg width="11" height="11" class="">
+<use href="./img/sprite.svg#close">
+</use>
+ </svg>
+</button>
+ <b class="modal-call">Оставьте свои данные, мы вам перезвоним</b>
 
-    <link rel="stylesheet" href="./css/main.css" />
+ <form action="#" class="modal-window">
+<div class="modal-input">
+<input class="personal-data name" type="text" id="name" name="name" placeholder=" ">
+ <svg width="12" height="12" class="form-icon">
+ <use href="./img/sprite.svg#name">
+</use></svg>
+<label for="name" class="personal-label">Имя</label>
+                    </div>
+
+                    <div class="modal-input">
+                        <input class="personal-data" type="tel" id="tel" name="tel" placeholder=" ">
+                        <svg width="13" height="13" class="form-icon">
+                            <use href="./img/sprite.svg#form-phone">
+                            </use>
+                        </svg>
+                        <label for="tel" class="personal-label">Телефон</label>
+                    </div>
+
+                    <div class="modal-input">
+                        <input class="personal-data" type="email" id="email" name="email" placeholder=" ">
+                        <svg width="15" height="12" class="form-icon">
+                            <use href="./img/sprite.svg#form-mail">
+                            </use>
+                        </svg>
+                        <label for="email" class="personal-label">Почта</label>
+                    </div>
+                    <textarea class="comment" name="comment" id="comment" name="comment" cols="30" rows="6"
+                        placeholder="Комментарий"></textarea>
+                    <label for="comment"></label>
+                    <label class="policy-text"><input type="checkbox" class="checkbox visually-hidden">
+
+                        <span class="custom-checkbox">
+                            <!-- <svg width="16" height="15" class="checkbox-svg">
+                                <use href="./img/sprite.svg#checkbox">
+                                </use>
+                            </svg> -->
+                            Соглашаюсь с
+                            рассылкой и
+                            принимаю<a class="policy-link" target="_blank" href="#">Условия
+                                договора</a>
+                        </span> </label>
+                    <button class="btn">Отправить</button>
+
+
+                </form>
+            </div>
+        </div>
+        </body>
+    <!-- <link rel="stylesheet" href="./css/main.css" /> -->
+
+    <!-- <style>
+  .backdrop.is-hidden{
+    opacity:0;
+    pointer-events: none;
+  }
+  .backdrop{
+    position: fixed;
+    background: rgba(0,0,0,0.2);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0;
+  }
+  .modal{    
+    position: relative;
+    max-width: 528px;
+    padding: 40px;
+    background-color: #ffffff;
+    
+    box-shadow: 0px 2px 1px rgba(0,0,0,0.2), 0px 1px 1px rgba(0,0,0,0.14), 0px 1px 3px rgba(0,0,0,0.12);
+    border-radius: 4px;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+   
+    transform: translate(-50%, -50%) scale(1);
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),-webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  }
+  .close-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 50%;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .close-button:hover,
+.close-button:focus {
+  fill: #2196f3;
+}
+
+  .modal-title{
+    width: 100%;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+    color: #212121;
+    margin-bottom: 30px;
+    display: block;
+  }
+.form-input{
+  position: relative;
+  margin-bottom: 28px;
+  }
+.input-field{
+  border: 1px solid rgba(33,33,33,0.2);
+    border-radius: 4px;
+    min-width: 448px;
+    min-height: 40px;
+    padding-left: 42px;
+}
+#name-form-icon {
+  width: 12px;
+  height: 12px;
+}
+#tel-form-icon {
+  width: 13px;
+  height: 13px;
+}
+#mail-form-icon {
+  width: 15px;
+  height: 12px;
+}
+.label{
+    position: absolute;
+    left: 42px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: #757575;
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    }
+    .form-icon{    
+      position: absolute;
+    left: 19px;
+    top: 50%;
+    transform: translateY(-50%);
+    fill: #212121;
+
+    }
+.input-field:focus-within .form-icon,
+.input-field:not(:placeholder-shown) + .form-icon {
+  fill: var(--accent-color);
+}
+
+</style>
+
   </head>
 
-  <style>
-    .product {
-      width: 370px;
-      margin-left: auto;
-      margin-right: auto;
+<div data-modal class="backdrop is hidden">
+<div class="modal">
+<button data-modal-close class="close-button">
+  <svg class="form-close-icon" id="close-icon">
+            <use xlink:href="./images/sprite.svg#close-icon"></use>
+          </svg>
+</button>
+<span class="modal-title">Оставьте свои данные, мы вам перезвоним</span>
+<form action ="#" class = "modal-form">
 
-      box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2),
-        0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
-    }
+<div class = "form-input">
+  <input class="input-field" type="text" id="name" name="name" placeholder=" ">
+  <svg class="form-icon" id="name-form-icon">
+    <use xlink:href="./images/sprite.svg#name-form-icon"></use>
+  </svg>
+  <label for="name" class ="label">Имя</label>
+</div class = "form-input">
 
-    .product-thumb:hover::before {
-      opacity: 1;
-    }
 
-    .product-thumb {
-      position: relative;
-      overflow: hidden;
-    }
+<div class="form-input">
+ <input class="input-field" type="tel" id="tel" name="tel" placeholder=" ">
+<svg  class="form-icon">
+<use href="./images/sprite.svg#tel-form-icon"></use></svg>
+<label for="tel" class="label">Телефон</label>
+ </div>
 
-    .product-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(255, 165, 0, 0.7);
+ <div class="modal-input">
+<input class="input-field" type="email" id="email" name="email" placeholder=" ">
+<svg  class="form-icon">
+ <use href="./images/sprite.svg#mail-form-icon">
+</use>
+</svg>
+<label for="email" class="label">Почта</label>
+ </div>
 
-      transform: translateY(100%);
-      opacity: 0;
-      transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
+ <textarea class="comment" name="comment" id="comment" name="comment" cols="30" rows="6"
+ placeholder="Комментарий"></textarea>
+ <label for="comment"></label>
+</div>
 
-    .product:hover .product-overlay {
-      transform: translateX(0);
-      opacity: 1;
-    }
-
-    
-    .overlay-text {
-      outline: 3px solid orange;
-      position: absolute;
-      display: flex;
-
-      /* top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%); */
-
-      /* Opacity анимируемое свойство, используйте вместо diplay none */
-      opacity: 0;
-      transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
-    }
-
-    .product:hover .product-actions .overlay-text {
-      opacity: 1;
-    }
-
-    .product-actions .icon {
-      width: 32px;
-      height: 32px;
-    }
-  </style>
-  <body>
-    <body>
-      <a href="./index.html">Назад на главную</a>
-
-      <article class="product">
-        <div class="product-thumb">
-          <img src="./images/portfolio-1.jpg" alt="Яблоки" />
-
-          <div class="product-overlay">
-            
-              <p class="overlay-text">
-                      Технокряк это современная площадка распространения
-                      коронавируса. Компании используют эту платформу для
-                      цифрового шпионажа и атак на защищённые сервера
-                      конкурентов.
-                    </p>
-
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-meta">
-          <h2 class="product-name">Красные яблоки</h2>
-          <p class="product-price">Цена: 100 кредитов</p>
-        </div>
-      </article>
-
-      <ul class="list port-list">
-              <li class="portfolio-element">
-                <a href="" class="product">
-                  <div class="product-thumb">
-                    <img
-                      class="image"
-                      src="./images/portfolio-1.jpg"
-                      alt="Изображение страницы веб-сайта"
-                      width="370"
-                    />
-                    <p class="overlay-text">
-                      Технокряк это современная площадка распространения
-                      коронавируса. Компании используют эту платформу для
-                      цифрового шпионажа и атак на защищённые сервера
-                      конкурентов.
-                    </p>
-
-                  </div>
-                  <h2 class="title">Технокряк</h2>
-                  <p class="portfolio-text">Веб-сайт</p>
-                </a>
-              </li>
-              </ul>
-              
+<label class="conditions">
+<input class="checkbox" type="checkbox" name="policy" id="policy"/>
+<a href="" class="form-link link">Условия договора</a></span></label>
+<button class="btn">Отправить</button>
 
 
 
-
-            <form>
-  <style>
-    .input-field{
-      width: 358px;
-      padding: 15px;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-border-radius: 4px;
-background-color: palevioletred;
-    }
-  </style>
- <label for="e-mail">E-mail</label>
-        <input
-        class="input-field"
-          type="email"
-          name="e-mail"
-          id="e-mail"
-          placeholder="E-mail"
-        />
-      <!-- button -->
-      <button type="submit">Оставить заявку</button>
-   
-            </form>
-    
-
-    <div class ="backdrop">
-      <div class = "modal">
-<button class ="close"></button>
-<p class = "modal-title">This is modal</p>
-<form id = "form" action = "#" method >
-<label for="e-mail">Почта</label>
-        <input
-        class="input-field"
-          type="email"
-          name="e-mail"
-          id="e-mail"
-          placeholder="E-mail"
-        />
-      <!-- button -->
-      <button type="submit">Отправить</button>
-   
 </form>
 
 </div>
-    </div>
-  </body>
+
+</div>
+ -->
+
+<script src="./js/modal.js"></script>
+</body>
 </html>
 
-
-<style>
-  .backdrop{
-    position: fixed;
-    top:0;
-    left:0;
-    width: 100%;
-    height: 100%;
-    background-color:rgba(223, 22, 2, 0.5);
-    z-index: 999;
-  }
-  .modal{
-    width: 500px;
-    border-radius: 15px;
-    border: 2px solid red;
-    padding: 15;
-    background-color: salmon;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    transition:
-    scale: 1;
-  }
-  /* if one field is in focus window changes color */
-  .modal:focus-within{
-    background: green;
-  }
-  .modal-title{
-    font-weight: 700;
-    text-align: center;
-    position: relative;
-  }
-  .input-field{
-    width: 100%;
-    height: 50px;
-    font-size: 18px;
-  }
-  .text-area{
-    resize: none;
-    width: 100%
-  }
-
-  .input-field::placeholder{
-    color:slateblue;
-  }
-</style>
-
-
-
-<!-- just notes -->
-<style
->
-input:required{
-  background-color: blue;
-}
-
-input[type="text"] {
-  background-color: green;
-}
-
-input:valid{
-  background-color: green;
-}
-input:invalid{
-  background-color: tomato;
-}
-/* can make a combination of conditions - input field which is required and input in it is invalid */
-input:required:invalid{
-  background-color: red; 
-}
-input:focus:invalid{ };
-
-
-/* field not valid and there is no placeholder in it (meaning user made some input). in this case focus validation is not needed as this is more advanced and corect */
-input:invalid:not(:placeholder-shown){
-  background: pink;
-} 
-
-/* FOR HOMEWORK */
-span + .input:placeholder-shown{
-  
-}
-
-/* for HW icon - use svg sprite */
-label{
-  position: relative;
-}
-label:before{
-  content:"";
-  position: absolute;
-  width:;
-  height;
-  transform: translateY (-50%)
-}
-/* text in the lable */
-form span{
-position: absolute;
-top: -12px;
-left:10px;
-transform: translateY(-50%) 
-}
-
-.icon{
-  fill: 
-  position: absolute;
-  top;
-  left;
-  transform:
-}
-
-label:focus-within .icon{
-  fill: blue;
-}
-</style>
-
-<form action = "">
-<label for="e-mail"><span>Почта</span></label>
-        <input
-        class="input-field"
-          type="email"
-          name="e-mail"
-          id="e-mail"
-          placeholder="E-mail"
-          required
-          pattern="[0-9]{5,10}" <!-- allows to enter from 5- 10 digits -  patterns used for validations -->
-        />
-        <select name = "" id = "">
-          <option value="">option 1</option>
-          <option value="">option 2</option>
-
-        </select>
-      <!-- button -->
-      <button type="submit">Отправить</button>
-   
-</form>
-
-span + .input:placeholder-shown{
-
-}
