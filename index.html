@@ -511,8 +511,8 @@
               <input
                 class="input-field"
                 type="text"
-                name="e-mail"
-                id="e-mail"
+                name="mail"
+                id="mail"
                 placeholder="E-mail"
               />
               <button type="submit" class="primary-button button--with-icon">
@@ -541,35 +541,48 @@
         <form id="form" action="#" class="form">
           <div class="form-field">
             <label class="label">
+              <input
+                class="input-field"
+                type="text"
+                name="name"
+                id="name"
+                placeholder=""
+              />
+              <span class="input-text">Имя</span>
               <svg class="form-icon" id="name-form-icon">
                 <use xlink:href="./images/sprite.svg#name-form-icon"></use>
               </svg>
-              <span class="input-text">Имя</span>
-              <input class="input-field" type="text" name="name" id="name" />
             </label>
           </div>
 
           <div class="form-field">
             <label class="label">
+              <input
+                class="input-field"
+                type="tel"
+                name="tel"
+                id="tel"
+                placeholder=""
+              />
+              <span class="input-text">Телефон</span>
               <svg class="form-icon" id="tel-form-icon">
                 <use xlink:href="./images/sprite.svg#tel-form-icon"></use>
               </svg>
-              <span class="input-text">Телефон</span>
-              <input class="input-field" type="tel" name="tel" id="tel" />
             </label>
           </div>
           <div class="form-field">
             <label class="label">
-              <svg class="form-icon" id="mail-form-icon">
-                <use xlink:href="./images/sprite.svg#mail-form-icon"></use>
-              </svg>
-              <span class="input-text">Почта</span>
               <input
                 class="input-field"
                 type="email"
                 name="e-mail"
                 id="e-mail"
+                placeholder=""
               />
+              <span class="input-text">Почта</span>
+              <svg class="form-icon" id="mail-form-icon">
+                <use xlink:href="./images/sprite.svg#mail-form-icon"></use>
+              </svg>
             </label>
           </div>
           <div class="form-field">
@@ -580,8 +593,7 @@
                 id="comment"
                 rows="6"
                 placeholder="Комментарий"
-              >
-              </textarea>
+              ></textarea>
             </label>
           </div>
           <div class="form-field">

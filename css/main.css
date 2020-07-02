@@ -1054,7 +1054,7 @@ textarea {
   outline: 1px solid var(--accent-color);
   border-radius: 4px;
 }
-.input-field:focus .input-text {
+.input-field:focus + .input-text {
   font-size: 12px;
   color: var(--accent-color);
   top: 0;
