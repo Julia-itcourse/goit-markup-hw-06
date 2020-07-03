@@ -926,7 +926,7 @@ address .physical-address {
   align-items: center;
 }
 
-.input-field {
+.footer .input-field {
   margin-right: 12px;
   width: 100%;
 
