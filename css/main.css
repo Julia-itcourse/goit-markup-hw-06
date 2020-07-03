@@ -941,7 +941,9 @@ address .physical-address {
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  transition: 900ms;
 }
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -953,6 +955,8 @@ address .physical-address {
 }
 
 .modal {
+  opacity: 1;
+  transition: 800ms;
   max-width: 528px;
   border-radius: 4px;
   background-color: var(--primary-background-color);
@@ -968,6 +972,9 @@ address .physical-address {
     0px 1px 3px rgba(0, 0, 0, 0.12);
 }
 
+.is-hidden .modal {
+  transform: translate(-50%, 100%);
+}
 .modal-title {
   font-weight: 700;
   font-size: 20px;
@@ -1041,6 +1048,7 @@ textarea {
 }
 
 .label {
+  display: block;
   position: relative;
   width: 100%;
 }
@@ -1049,6 +1057,7 @@ textarea {
   top: 50%;
   left: 42px;
   transform: translateY(-50%);
+  transition: var(--primary-transition);
 }
 
 .form-icon {
@@ -1072,7 +1081,7 @@ textarea {
   color: var(--accent-color);
   top: 0;
 
-  translate: (-28px, calc(-100%-4px));
+  transform: translate(-28px, calc(-100% - 4px));
 }
 .checkbox {
   -webkit-appearance: none;
@@ -1082,6 +1091,7 @@ textarea {
 }
 .checkbox-icon {
   display: inline-block;
+  vertical-align: middle;
   width: 16px;
   height: 15px;
   background-image: url(../images/checkbox-icon-empty.svg);
